@@ -8,10 +8,7 @@ const todoRoutes = require('./routes/todoRoutes');
 const app = express();
 
 // Middleware
-app.use(cors({
-  origin: ['https://todo-frontend-beige-rho.vercel.app/', 'http://localhost:5173/'],
-  credentials: true
-}));
+app.use(cors({ origin: 'https://todo-frontend-beige-rho.vercel.app' }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
